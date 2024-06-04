@@ -19,7 +19,7 @@ export default class RepositorioUsuario {
   static async salvar(usuario: Partial<Usuario>): Promise<Usuario> {
     return await RepositorioUsuario.db.usuario.upsert({
       where: { id: usuario.id },
-      create: usuario,
+      create: usuario as Usuario,
       update: usuario,
     })
   }
