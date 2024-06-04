@@ -10,7 +10,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migration:development": "npx prisma migrate dev",
+    "migration:production": "npx prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "5.14.0",

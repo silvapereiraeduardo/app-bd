@@ -14,6 +14,34 @@ Aplicação para gerenciamento de usuários, criada na video aula da cod3r, disp
   yarn install
 ```
 
+# Migrações
+
+[Documentação do Prisma](https://www.prisma.io/docs/orm/prisma-migrate/workflows/development-and-production)
+
+## Desenvolvimento
+
+```bash
+yarn migration:development
+```
+
+ou
+
+```bash
+npx prisma migrate dev
+```
+
+## Produção
+
+```bash
+yarn migration:production
+```
+
+ou
+
+```bash
+npx prisma migrate deploy
+```
+
 # Execução
 
 ## Desenvolvimento
