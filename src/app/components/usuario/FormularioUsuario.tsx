@@ -52,12 +52,14 @@ export default function FormularioUsuario(props: FormularioUsuarioProps) {
             Cancelar
           </button>
         </div>
-        <button
-          className="bg-red-500 px-4 py-2 rounded-md"
-          onClick={() => props.excluir(props.usuario)}
-        >
-          Excluir
-        </button>
+        {props.usuario.id && (
+          <button
+            className="bg-red-500 px-4 py-2 rounded-md"
+            onClick={() => props.excluir(props.usuario)}
+          >
+            Excluir
+          </button>
+        )}
       </div>
     </div>
   )

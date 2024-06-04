@@ -12,11 +12,24 @@ export default function Page() {
 
   return (
     <Pagina className="flex flex-col gap-10">
-      <Titulo
-        icone={IconUser}
-        principal="Usuarios"
-        secundario="Cadastro de Usuarios"
-      />
+      <div className="flex justify-between items-center">
+        <Titulo
+          icone={IconUser}
+          principal="Usuarios"
+          secundario="Cadastro de Usuarios"
+        />
+        {!usuario && (
+          <div className="flex justify-end">
+            <button
+              className="flex items-center gap-2 bg-blue-500 px-4 py-2 rounded-md"
+              onClick={() => alterarUsuario({})}
+            >
+              <IconPlus />
+              <span>Novo Usuario</span>
+            </button>
+          </div>
+        )}
+      </div>
       {usuario ? (
         <FormularioUsuario
           usuario={usuario}
@@ -27,15 +40,6 @@ export default function Page() {
         />
       ) : (
         <>
-          <div className="flex justify-end">
-            <button
-              className="flex items-center gap-2 bg-blue-500 px-4 py-2 rounded-md"
-              onClick={() => alterarUsuario({})}
-            >
-              <IconPlus />
-              <span>Novo Usuario</span>
-            </button>
-          </div>
           <ListaUsuario usuarios={usuarios} onClick={alterarUsuario} />
         </>
       )}
