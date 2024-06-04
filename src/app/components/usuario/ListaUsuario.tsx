@@ -8,7 +8,7 @@ export interface LinhaUsuarioProps {
 
 export default function ListaUsuario(props: LinhaUsuarioProps) {
   return (
-    <div className="flex flex-col gap-4 rounded-md">
+    <div className="flex flex-col gap-4">
       {props.usuarios.map((usuario) => (
         <LinhaUsuario
           key={usuario.id}
