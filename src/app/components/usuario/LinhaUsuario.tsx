@@ -9,7 +9,7 @@ export interface LinhaUsuarioProps {
 export default function LinhaUsuario(props: LinhaUsuarioProps) {
   return (
     <div
-      className="flex p-4 bg-zinc-900 items-center gap-4 cursor-pointer rounded-md"
+      className="flex p-4 bg-zinc-900 hover:bg-zinc-800 items-center gap-4 cursor-pointer rounded-md"
       onClick={() => props.onClick(props.usuario)}
     >
       <Image

@@ -1,4 +1,5 @@
 import { Usuario } from '@/core/model/Usuario'
+import Botao from '../shared/Botao'
 import InputTexto from '../shared/InputTexto'
 
 export interface FormularioUsuarioProps {
@@ -39,26 +40,20 @@ export default function FormularioUsuario(props: FormularioUsuarioProps) {
 
       <div className="flex justify-between gap-4">
         <div className="flex gap-4">
-          <button
-            className="bg-blue-500 px-4 py-2 rounded-md"
-            onClick={() => props.salvar(props.usuario)}
-          >
+          <Botao variant="primary" onClick={() => props.salvar(props.usuario)}>
             Salvar
-          </button>
-          <button
-            className="bg-zinc-500 px-4 py-2 rounded-md"
+          </Botao>
+          <Botao
+            variant="secondary"
             onClick={() => props.cancelar(props.usuario)}
           >
             Cancelar
-          </button>
+          </Botao>
         </div>
         {props.usuario.id && (
-          <button
-            className="bg-red-500 px-4 py-2 rounded-md"
-            onClick={() => props.excluir(props.usuario)}
-          >
+          <Botao variant="danger" onClick={() => props.excluir(props.usuario)}>
             Excluir
-          </button>
+          </Botao>
         )}
       </div>
     </div>

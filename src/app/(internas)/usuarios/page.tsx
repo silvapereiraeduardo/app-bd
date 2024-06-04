@@ -1,4 +1,5 @@
 'use client'
+import Botao from '@/app/components/shared/Botao'
 import Pagina from '@/app/components/template/Pagina'
 import Titulo from '@/app/components/template/Titulo'
 import FormularioUsuario from '@/app/components/usuario/FormularioUsuario'
@@ -20,13 +21,14 @@ export default function Page() {
         />
         {!usuario && (
           <div className="flex justify-end">
-            <button
-              className="flex items-center gap-2 bg-blue-500 px-4 py-2 rounded-md"
+            <Botao
+              variant="primary"
+              className="flex items-center gap-2"
               onClick={() => alterarUsuario({})}
             >
               <IconPlus />
               <span>Novo Usuario</span>
-            </button>
+            </Botao>
           </div>
         )}
       </div>
