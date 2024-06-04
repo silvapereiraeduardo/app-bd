@@ -35,3 +35,21 @@ Para executar em modo de produção, é necessario executar o [build](#build) an
 ```bash
   yarn build
 ```
+
+# Projeto
+
+## Página inicial
+
+![Página inicial](docs/assets/image.png)
+
+## Cadastro de Usuário
+
+![Cadastro de Usuário](docs/assets/image-2.png)
+
+## Lista de Usuarios
+
+![Lista de Usuarios](docs/assets/image-1.png)
+
+## Edição de Usuário
+
+![Edição do Usuário](docs/assets/image-3.png)
